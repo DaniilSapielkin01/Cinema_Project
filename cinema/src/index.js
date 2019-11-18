@@ -1,9 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
+//BOOTSTRAP 4
+import "bootstrap/dist/css/bootstrap.min.css";
+import $ from "jquery";
+import Popper from "popper.js";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+//Developer Styles
+import "./assets/style/index.css";
+import "./assets/style/icons/css/index.css";
+//
+import { Cinema } from "../src/containers/Cinema";
 
-serviceWorker.unregister();
+ReactDOM.render(<Cinema />, document.getElementById("root"));
