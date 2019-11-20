@@ -1,12 +1,9 @@
 html {
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 body {
-  height: 100%;
   margin: 0;
-  padding: 0;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -18,10 +15,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-/* WRAPPER */
+/* developer work */
 .wrapper {
   display: flex;
-  flex-direction: column;
   min-height: 100%;
+  flex-direction: column;
+  font-family: "Playfair Display", serif;
+}
+#root {
+  height: 100%;
+}
+
+a {
+  color: #eee;
+  transition: 0.6s ease;
+}
+a:hover {
+  color: red;
+}
+.active {
+  color: red;
+}
+ul,
+ol {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* ______ */
+.block {
+  display: flex;
 }

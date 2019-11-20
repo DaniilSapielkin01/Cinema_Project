@@ -1,7 +1,8 @@
 @import url("../style/components/basic.css");
-@import url("../style/components/app.css");
+@import url("../style/components/main.css");
+@import url("../style/components/header.css");
+@import url("../style/components/footer.css");
+/* __ */
 @import url("../style/components/button.css");
-@import url("../style/components/img.css");
-@import url("../style/components/link.css");
 @import url("../style/components/player.css");
-@import url("../style/components/card.css");
+@import url("../style/components/user.css");

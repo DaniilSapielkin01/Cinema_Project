@@ -1,0 +1,21 @@
+.main {
+  background: #1a133b;
+  flex: 1;
+  color: white;
+  padding: 10px 0;
+}
+
+/* ____ */
+.posters {
+  justify-content: space-around;
+}
+.block-poster {
+  height: auto;
+  padding: 0;
+  margin: 2px;
+}
+.img-poster-title {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

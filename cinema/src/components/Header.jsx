@@ -1,17 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 
-import { Logo } from "./Logo";
-import { Nav } from "./Nav";
-import { UserIcon } from "./User";
+import { Logo, Nav, User } from "./index";
 
 export const Header = () => (
   <header>
-    <div className="left-block">
+    <div className="container d-flex bd-highlight mb-3">
       <Logo />
-      {/* <Nav /> */}
-    </div>
-    <div className="rigth-block">
-      <UserIcon />
+      <Nav />
+      <User />
     </div>
   </header>
 );

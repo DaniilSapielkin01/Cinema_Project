@@ -58,16 +58,24 @@
 
 .icon-facebook:before {
   content: "\f09a";
+  text-decoration: none;
+  padding: 5px 1px 0 0;
+  
 } /* '' */
 .icon-instagram:before {
   content: "\f16d";
+  text-decoration: none;
 } /* '' */
 .icon-pinterest:before {
   content: "\f231";
+  text-decoration: none;
 } /* '' */
 .icon-user-circle:before {
   content: "\f2bd";
+  font-size: 29px;
+  text-decoration: none;
 } /* '' */
 .icon-twitter:before {
   content: "\f309";
+  text-decoration: none;
 } /* '' */
