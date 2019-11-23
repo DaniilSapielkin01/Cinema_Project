@@ -10,26 +10,26 @@ class MyMovies extends React.Component {
   }
 
   render() {
-    // console.log(this.props);
+    console.log("MyMovies props =>", this.props);
     const { isLoading, errorMsg, movies } = this.props;
 
     return (
       <div className="container">
-        <h4>Рекомендации к проссмотру </h4>
         <div className="posters row">
-          {isLoading ? (
+          {/* {isLoading ? (
             <p className="name-logo">Loading ...</p>
           ) : (
             movies.map((item, i) => (
               <div key={i} className="block-poster col-md-2 col-sm-3">
-                <Link to="/movie">
+                <Link to="/film">
                   <img src={item.poster} alt="" className="img-poster-title" />
                 </Link>
               </div>
             ))
-          )}
-          <span>{errorMsg}</span>
+          )} */}
         </div>
+        <br />
+        <span>MYMOVIES = компонент: {errorMsg}</span>
       </div>
     );
   }

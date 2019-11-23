@@ -31,10 +31,10 @@ a {
   transition: 0.6s ease;
 }
 a:hover {
-  color: red;
+  color: tomato;
 }
 .active {
-  color: red;
+  color: #f8104d;
 }
 ul,
 ol {
@@ -47,7 +47,29 @@ li {
   margin: 0;
   padding: 0;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #eee;
+}
+
 /* ______ */
 .block {
   display: flex;
+}
+.container {
+  margin: auto;
+}
+p {
+  font-family: Roboto, Arial, Helvetica, Helvetica Neue, FreeSans, sans-serif;
+}
+
+.font-family {
+  font-family: "Bebas Neue", cursive;
+}
+label {
+  color: #eee;
 }

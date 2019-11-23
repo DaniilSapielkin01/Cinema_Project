@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Logo, Nav, User } from "./index";
+import { Logo, Nav } from "./index";
+import { User } from "../containers/User";
 
 export const Header = () => (
   <header>

@@ -1,6 +1,8 @@
 
 .icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-ticket:before { content: '\f145'; } /* '' */
 .icon-instagram:before { content: '\f16d'; } /* '' */
+.icon-copyright:before { content: '\f1f9'; } /* '' */
 .icon-pinterest:before { content: '\f231'; } /* '' */
 .icon-user-circle:before { content: '\f2bd'; } /* '' */
 .icon-twitter:before { content: '\f309'; } /* '' */

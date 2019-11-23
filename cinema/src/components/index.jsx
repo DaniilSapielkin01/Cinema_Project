@@ -3,4 +3,4 @@ export * from "./Header";
 export * from "./Footer";
 export * from "./Logo";
 export * from "./Nav";
-export * from "./User";
+export * from "../containers/User";

@@ -18,7 +18,7 @@ const getMoviesResolved = payload => ({
 
 const getMoviesRejected = () => ({
   type: GET_MOVIES_REJECTED,
-  payload: "Something wrong!"
+  payload: "ERROR"
 });
 
 export const getMovies = () => {
@@ -27,7 +27,6 @@ export const getMovies = () => {
     axios
       .get(URL_MOVIE)
       .then(({ data }) => {
-        history.push("/");
         dispatch(getMoviesResolved(data.movie));
         console.log("movies=>>>", data.movie);
       })

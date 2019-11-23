@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import { MyMoviesContainer } from "../containers/MyMovies";
 import { Grid } from "../components/Grid";
 import { Header } from "../components/Header";
+import { Carousel } from "antd";
 
 export const Main = () => {
   return (
@@ -13,7 +14,12 @@ export const Main = () => {
         <Route path="/movies" component={Grid} />
         {/* <MyMoviesContainer /> */}
         {/*  При таком состоянии не работает ==> <Route path="/movies" component={MyMoviesContainer} /> не успевает загрузится  */}
-        <Route path="/" exact component={MyMoviesContainer} />
+        <Route
+          path="/"
+          exact
+          component={MyMoviesContainer}
+          component={Carousel}
+        />
       </div>
     </div>
   );

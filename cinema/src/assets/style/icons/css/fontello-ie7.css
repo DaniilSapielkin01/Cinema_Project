@@ -1,6 +1,6 @@
 [class^="icon-"],
 [class*=" icon-"] {
-  /* font-family: "fontello"; */
+  font-family: "fontello";
   font-style: normal;
   font-weight: normal;
 
@@ -17,10 +17,22 @@
     this.innerHTML = "&#xf09a;&nbsp;"
   );
 }
+.icon-ticket {
+  *zoom: expression(
+    this.runtimeStyle[ "zoom" ] = "1",
+    this.innerHTML = "&#xf145;&nbsp;"
+  );
+}
 .icon-instagram {
   *zoom: expression(
     this.runtimeStyle[ "zoom" ] = "1",
     this.innerHTML = "&#xf16d;&nbsp;"
+  );
+}
+.icon-copyright {
+  *zoom: expression(
+    this.runtimeStyle[ "zoom" ] = "1",
+    this.innerHTML = "&#xf1f9;&nbsp;"
   );
 }
 .icon-pinterest {
