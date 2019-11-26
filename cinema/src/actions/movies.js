@@ -1,14 +1,10 @@
 import axios from "axios";
-
-import { history } from "../index";
 import {
   GET_MOVIES_PENDING,
   GET_MOVIES_REJECTED,
   GET_MOVIES_RESOLVED,
   URL_MOVIE
-} from "../constants";
-
-import { movies } from "../reducers/index";
+} from "../routes/constants";
 
 const getMoviesPending = () => ({ type: GET_MOVIES_PENDING });
 const getMoviesResolved = payload => ({
@@ -28,7 +24,7 @@ export const getMovies = () => {
       .get(URL_MOVIE)
       .then(({ data }) => {
         dispatch(getMoviesResolved(data.movie));
-        console.log("movies=>>>", data.movie);
+        console.log("movies js=>>>", data.movie);
       })
       .catch(error => {
         console.dir(error);

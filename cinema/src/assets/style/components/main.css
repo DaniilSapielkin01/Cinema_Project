@@ -12,13 +12,50 @@
 .block-poster {
   height: auto;
   padding: 0;
-  margin: 2px;
+  margin: 2px 2px 40px 2px;
+  position: relative;
 }
 .img-poster-title {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+.background-img-block {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.overlay-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  transition: 0.3s ease;
+  padding: 10px;
+}
+.overlay-img:hover {
+  opacity: 1;
+  display: flex;
+  background: rgba(0, 0, 0, 0.3);
+}
+.heading-slim-film {
+  color: white;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 3px;
+  border-bottom: 1px solid rgba(2, 165, 255, 1);
+  padding-bottom: 7px;
+}
+
 /* Carusel */
 .slick-slider {
   margin: 25px 0;
@@ -26,13 +63,13 @@
 .slick-slide img {
   display: block;
   padding: 0 16px;
-  border-radius: 30px;
+  border-radius: 10px;
   height: 100%;
   object-fit: fill;
 }
 .slick-list {
-  border-radius: 50px;
-  height: 260px;
+  border-radius: 10px;
+  height: 150px;
 }
 .slick-track {
   height: 100%;

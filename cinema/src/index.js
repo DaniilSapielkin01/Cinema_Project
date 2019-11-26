@@ -1,7 +1,7 @@
 //BOOTSTRAP 4
 import "bootstrap/dist/css/bootstrap.min.css";
-import $ from "jquery";
-import Popper from "popper.js";
+// import $ from "jquery";
+// import Popper from "popper.js";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 //SLICK for slider
 import "slick-carousel/slick/slick.css";
@@ -15,10 +15,9 @@ import { createBrowserHistory } from "history";
 
 //Developer Styles
 import "./assets/style/index.css";
-import "./assets/style/icons/css/index.css";
 //
 import { store } from "./store";
-import { Cinema } from "../src/containers/Cinema";
+import { Cinema } from "./containers/Cinema";
 
 export const history = createBrowserHistory();
 

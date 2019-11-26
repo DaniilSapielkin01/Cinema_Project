@@ -17,7 +17,7 @@ export class User extends Component {
     return (
       <div className="user-input  ml-auto p-2 bd-highlight">
         <Link to="/user" onClick={this.handleClickUserShow}>
-          <a href="/" className="icon-user-circle"></a>
+          <span className="icon-user-circle"></span>
         </Link>
         {this.state.UserShow && (
           <UserInput handleUserShow={this.handleClickUserShow} />

@@ -1,8 +1,8 @@
 
-.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-back:before { content: '\e800'; } /* '' */
+.icon-twitter:before { content: '\f099'; } /* '' */
 .icon-ticket:before { content: '\f145'; } /* '' */
 .icon-instagram:before { content: '\f16d'; } /* '' */
-.icon-copyright:before { content: '\f1f9'; } /* '' */
-.icon-pinterest:before { content: '\f231'; } /* '' */
 .icon-user-circle:before { content: '\f2bd'; } /* '' */
-.icon-twitter:before { content: '\f309'; } /* '' */
+.icon-facebook:before { content: '\f30c'; } /* '' */
+.icon-pinterest:before { content: '\f312'; } /* '' */

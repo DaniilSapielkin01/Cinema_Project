@@ -8,39 +8,45 @@ class MyMovies extends React.Component {
   componentDidMount() {
     this.props.getMovies();
   }
-
   render() {
-    console.log("MyMovies props =>", this.props);
+    // console.log("MyMovies props =>", this.props);
     const { isLoading, errorMsg, movies } = this.props;
-
+    // console.log("props.movie=>", this.props.movie);
     return (
       <div className="container">
         <div className="posters row">
-          {/* {isLoading ? (
+          {isLoading ? (
             <p className="name-logo">Loading ...</p>
           ) : (
             movies.map((item, i) => (
               <div key={i} className="block-poster col-md-2 col-sm-3">
-                <Link to="/film">
-                  <img src={item.poster} alt="" className="img-poster-title" />
-                </Link>
+                <div className="background-img-block">
+                  <Link to={`/film/${item._id}`}>
+                    <img
+                      src={item.poster}
+                      alt=""
+                      className="img-poster-title"
+                    />
+                    <h5 className="heading-slim-film">{item.title}</h5>
+                    <div className="overlay-img"></div>
+                  </Link>
+                </div>
               </div>
             ))
-          )} */}
+          )}
         </div>
         <br />
-        <span>MYMOVIES = компонент: {errorMsg}</span>
+        <span> {errorMsg}</span>
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  errorMsg: state.errorMsg,
   isLoading: state.isLoading,
+  errorMsg: state.errorMsg,
   movies: state.movies
 });
-
 const mapDispatchToProps = {
   getMovies
 };

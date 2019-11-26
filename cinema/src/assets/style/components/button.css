@@ -5,10 +5,47 @@
 .btn {
   background: #f8104d;
   color: white;
-  transition: 0.5s ease;
+  transition: 0.4s ease;
   margin: 0 auto;
   font-size: 12px;
 }
 .btn:hover {
   background: tomato;
+}
+.btn-back {
+  margin-bottom: 15px;
+  font-size: 12px;
+  padding: 1px 5px;
+}
+.btn-nav-menu {
+  background: transparent;
+  border: none;
+  font-size: 15px;
+}
+.btn-nav-menu:hover {
+  background: transparent;
+  color: tomato;
+}
+.btn-secondary:focus {
+  border: none;
+  box-shadow: none;
+}
+/* header navbar menu */
+.dropdown:hover > .dropdown-menu {
+  display: block;
+  transition: 0.5s;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 80%;
+  left: 6px;
+  font-size: 15px;
+}
+.dropdown-menu:hover {
+  transition: 0.5s;
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: #a7a7a7;
+  transition: all 0.6s ease;
 }

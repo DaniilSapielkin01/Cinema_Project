@@ -1,24 +1,39 @@
 import React from "react";
 import { connect } from "react-redux";
-import { link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { getMovies } from "../actions/movies";
-import { MyMoviesContainer } from "./MyMovies";
 
 class BodyMovie extends React.Component {
+  state = {
+    movie: {}
+  };
+
   componentDidMount() {
-    this.props.getMovies();
+    const movieId = this.props.match.params.id;
+    const movie = this.props.movies.find(item => item._id === movieId);
+
+    this.setState({ movie });
   }
 
   render() {
-    console.log("BodyMovie props  =>", this.props);
-    const { isLoading, errorMsg, movies } = this.props;
+    const { errorMsg, movie } = this.state;
+    // console.log("BodyMovie this.PROPS =>", this.props);
+    // console.log("BodyMovie =>", this.state.movie);
+
     return (
       <div className="conainer ">
+        <Link to="/">
+          <button className="btn btn-back icon-back">Назад</button>
+        </Link>
         <div className="container-body-film">
-          <h4 className="heading-h4">Название фильма!</h4>
+          <h4 className="heading-h4">{movie.title}</h4>
           <div className="info-film">
-            <p>2014-2019, США, Детективы, Драмы, Криминал</p>
+            <p>
+              {`${movie.country} , `}
+              {`${movie.genre} , `}
+              {` Возраст +${movie.age}`}
+            </p>
           </div>
           <div className="btn-container">
             <button className="btn icon-ticket">Купить билет</button>
@@ -27,51 +42,39 @@ class BodyMovie extends React.Component {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/zdJIYldakwY"
-              frameborder="0"
+              src={movie.trailer}
+              frameBorder="0"
               allow="accelerometer; autoplay=1; encrypted-media; gyroscope; picture-in-picture; "
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
           <div>
-            <p>
-              ___item.info___ Готэм давно стал столицей преступного мира. Власть
-              над городом захватывают бандиты, безумцы и суперзлодеи, которым
-              противостоит небольшая группа полицейских во главе с капитаном
-              Джеймсом...
-            </p>
+            <p>{movie.description}</p>
           </div>
           {/* Переход по билетам */}
-
-          {/* now this ERROR in 22:34  */}
           {/* {isLoading ? (
-          <p className="name-logo">Loading ...</p>
-        ) : (
-          movies.map((item, i) => (
-            <div key={i} className="">
-              <h1>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam
-                aspernatur perferendis sed
-              </h1>
-            </div>
-          ))
-        )} */}
+            <p className="name-logo">Loading ...</p>
+          ) : (
+            movies.map((item, i) => (
+              <div key={i} className="">
+                <h1>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Totam aspernatur perferendis sed
+                </h1>
+              </div>
+            ))
+          )} */}
 
-          <span>
-            ____BodyMovie:ошибка по получению данных об фильме ВЫШЕ ЭТО ТЕСТ___
-            <br />
-            {errorMsg}
-          </span>
+          <span>{errorMsg}</span>
         </div>
-        <MyMoviesContainer />
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  errorMsg: state.errorMsg,
   isLoading: state.isLoading,
+  errorMsg: state.errorMsg,
   movies: state.movies
 });
 

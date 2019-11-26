@@ -10,31 +10,30 @@ export const Footer = () => {
               href="https://uk-ua.facebook.com"
               className="icon-facebook"
               target="blank"
-            ></a>
+            />
           </li>
           <li>
             <a
               href="https://twitter.com"
               className="icon-twitter"
               target="blank"
-            ></a>
+            />
           </li>
           <li>
             <a
               href="https://www.instagram.com"
               className="icon-instagram"
-              target="_blank"
-            ></a>
+              target="blank"
+            />
           </li>
           <li>
             <a
               href="https://www.pinterest.com"
               className="icon-pinterest"
               target="blank"
-            ></a>
+            />
           </li>
         </ul>
-        <p></p>
         <p className="author">Author: Sapielkin Daniil</p>
       </div>
     </footer>

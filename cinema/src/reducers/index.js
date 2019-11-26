@@ -2,7 +2,7 @@ import {
   GET_MOVIES_PENDING,
   GET_MOVIES_RESOLVED,
   GET_MOVIES_REJECTED
-} from "../constants";
+} from "../routes/constants";
 
 const INITIAL_DATA = {
   isLoading: false,

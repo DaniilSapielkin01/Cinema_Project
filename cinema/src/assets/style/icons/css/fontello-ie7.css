@@ -1,55 +1,19 @@
-[class^="icon-"],
-[class*=" icon-"] {
-  font-family: "fontello";
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'fontello';
   font-style: normal;
   font-weight: normal;
-
+ 
   /* fix buttons height */
   line-height: 1em;
-
+ 
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
 }
-
-.icon-facebook {
-  *zoom: expression(
-    this.runtimeStyle[ "zoom" ] = "1",
-    this.innerHTML = "&#xf09a;&nbsp;"
-  );
-}
-.icon-ticket {
-  *zoom: expression(
-    this.runtimeStyle[ "zoom" ] = "1",
-    this.innerHTML = "&#xf145;&nbsp;"
-  );
-}
-.icon-instagram {
-  *zoom: expression(
-    this.runtimeStyle[ "zoom" ] = "1",
-    this.innerHTML = "&#xf16d;&nbsp;"
-  );
-}
-.icon-copyright {
-  *zoom: expression(
-    this.runtimeStyle[ "zoom" ] = "1",
-    this.innerHTML = "&#xf1f9;&nbsp;"
-  );
-}
-.icon-pinterest {
-  *zoom: expression(
-    this.runtimeStyle[ "zoom" ] = "1",
-    this.innerHTML = "&#xf231;&nbsp;"
-  );
-}
-.icon-user-circle {
-  *zoom: expression(
-    this.runtimeStyle[ "zoom" ] = "1",
-    this.innerHTML = "&#xf2bd;&nbsp;"
-  );
-}
-.icon-twitter {
-  *zoom: expression(
-    this.runtimeStyle[ "zoom" ] = "1",
-    this.innerHTML = "&#xf309;&nbsp;"
-  );
-}
+ 
+.icon-back { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.icon-twitter { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf099;&nbsp;'); }
+.icon-ticket { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf145;&nbsp;'); }
+.icon-instagram { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf16d;&nbsp;'); }
+.icon-user-circle { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf2bd;&nbsp;'); }
+.icon-facebook { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf30c;&nbsp;'); }
+.icon-pinterest { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf312;&nbsp;'); }

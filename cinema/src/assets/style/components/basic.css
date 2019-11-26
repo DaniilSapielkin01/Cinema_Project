@@ -32,6 +32,7 @@ a {
 }
 a:hover {
   color: tomato;
+  text-decoration: none;
 }
 .active {
   color: #f8104d;
