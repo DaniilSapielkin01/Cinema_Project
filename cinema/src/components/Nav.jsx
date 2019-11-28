@@ -3,23 +3,22 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 import { getMovies } from "../actions/movies";
-import { SCARY } from "../routes/constants"
+import {
+  SCARY,
+  COMEDY,
+  FANTASY,
+  ROMANCE,
+  ACTION,
+  TRAILERS
+} from "../routes/constants";
 
 class Nav extends React.Component {
   state = {
     genre: {}
   };
-  componentDidMount() {
-    // this.props.getMovies();
-    // const movieGenre = this.props.match.params.genre;
-    // const genre = this.props.movies.filter(item => item.genre === movieGenre);
-    // this.setState({ genre });
-  }
 
   render() {
-    const { movies } = this.props;
-    console.log("nav", this.state);
-    console.log("nav movie", this.props.movies);
+    // const { movies } = this.props;
 
     return (
       <nav className="nav p-2 bd-highlight">
@@ -45,27 +44,27 @@ class Nav extends React.Component {
                 Ужасы
               </button>
             </Link>
-            <Link to="/movies_category/Comedy">
+            <Link to={`/movies_category/${COMEDY}`}>
               <button className="dropdown-item" type="button">
                 Комедии
               </button>
             </Link>
-            <Link to="/movies_category/Trailers">
+            <Link to={`/movies_category/${TRAILERS}`}>
               <button className="dropdown-item" type="button">
                 Трейлеры
               </button>
             </Link>
-            <Link to="/movies_category/Action">
+            <Link to={`/movies_category/${ACTION}`}>
               <button className="dropdown-item" type="button">
                 Боевики
               </button>
             </Link>
-            <Link to="/movies_category/Romance">
+            <Link to={`/movies_category/${ROMANCE}`}>
               <button className="dropdown-item" type="button">
                 Мелодраммы
               </button>
             </Link>
-            <Link to="/movies_category/Fantasy">
+            <Link to={`/movies_category/${FANTASY}`}>
               <button className="dropdown-item" type="button">
                 Фантастика
               </button>

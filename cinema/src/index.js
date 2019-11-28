@@ -21,8 +21,6 @@ import { Cinema } from "./containers/Cinema";
 
 export const history = createBrowserHistory();
 
-// ReactDOM.render(<Cinema />, document.getElementById("root"));
-
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>

@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 import { MyBodyMovieContainer } from "./BodyMovie";
 import HomePage from "../components/HomePage";
-import { User } from "../containers/User";
+import { User } from "./User";
 import { MyMovieCategory } from "../components/MovieCategory";
 
 import { getMovies } from "../actions/movies";
@@ -16,6 +16,7 @@ export class Main extends React.Component {
 
   render() {
     // console.log("log", getMovies);
+
     const { isLoading } = this.props;
 
     return (
@@ -40,11 +41,11 @@ export class Main extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  isLoading: state.loading.isLoading
-});
 const mapDispatchToProps = {
   getMovies
 };
+const mapStateToProps = state => ({
+  isLoading: state.loading.isLoading
+});
 
 export const MainContainer = connect(mapStateToProps, mapDispatchToProps)(Main);

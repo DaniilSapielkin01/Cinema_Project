@@ -10,26 +10,26 @@ class MovieCategory extends React.Component {
     genres: {}
   };
   componentDidMount() {
-    const category = this.props.match.params.category;
+    const category = this.props.match.params._genre;
 
-    const movies = this.props.movies.filter(item => {
+    console.log("category", category);
+    console.log("category_props", this.props);
+
+    const moviesGenre = this.props.movies.filter(item => {
       return item.genre.some(genre => {
         return genre.toLowerCase().trim() === category;
       });
     });
-    this.setState({ movies });
-    // console.log("___", this.item.genre);
+    this.setState({ movies: moviesGenre });
+    console.log("genre", moviesGenre);
   }
 
   render() {
-    console.log("___", this.genres);
-
-    const { errorMsg, movies } = this.state;
-    console.log("MOVIE_CATEGORY props => ", this.props);
-
+    const { movies, genres } = this.state;
+    console.log("genr11e", movies);
     return (
       <div className="container">
-        <h5>фильмы 1111{movies}</h5>
+        <h5>фильмы 1111</h5>
       </div>
     );
   }
