@@ -21,7 +21,7 @@ export const getMovies = () => {
   return dispatch => {
     dispatch(getMoviesPending());
     axios
-      .get(URL_MOVIE)]``
+      .get(URL_MOVIE)
       .then(({ data }) => {
         dispatch(getMoviesResolved(data.movie));
         // console.log("movies js=>>>", data.movie);

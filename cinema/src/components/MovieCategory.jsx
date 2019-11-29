@@ -7,7 +7,7 @@ import { getMovies } from "../actions/movies";
 class MovieCategory extends React.Component {
   state = {
     movies: [],
-    genres: {}
+    genre: ""
   };
   componentDidMount() {
     const category = this.props.match.params._genre;
@@ -20,16 +20,61 @@ class MovieCategory extends React.Component {
         return genre.toLowerCase().trim() === category;
       });
     });
-    this.setState({ movies: moviesGenre });
+    this.setState({
+      movies: moviesGenre,
+      genre: category
+     });
     console.log("genre", moviesGenre);
   }
 
+
+  componentDidUpdate() {
+    const category = this.props.match.params._genre;
+    if (this.state.genre !== category) {
+
+    console.log("appdate", category);
+    console.log("appdate_props", this.props);
+
+    const moviesGenre = this.props.movies.filter(item => {
+      return item.genre.some(genre => {
+        return genre.toLowerCase().trim() === category;
+      });
+    });
+    console.log("genre apdate", moviesGenre);
+
+    this.setState({ movies: moviesGenre,
+      genre: category });
+  }
+  }
+
   render() {
-    const { movies, genres } = this.state;
+    const { isLoading, errorMsg, movies, genres } = this.state;
     console.log("genr11e", movies);
     return (
       <div className="container">
-        <h5>фильмы 1111</h5>
+        <div className="posters row">
+          {isLoading ? (
+            <p className="name-logo">Loading ...</p>
+          ) : (
+            movies.map((item, i) => (
+              <div key={i} className="block-poster col-md-2 col-sm-3">
+                <div className="background-img-block">
+                  <Link to={`/film/${item._id}`}>
+                    <img
+                      src={item.poster}
+                      alt=""
+                      className="img-poster-title"
+                    />
+                    <h5 className="heading-slim-film">{item.title}</h5>
+                    <div className="overlay-img"></div>
+                  </Link>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+        <br />
+        <span> {errorMsg}</span>
       </div>
     );
   }
